@@ -166,8 +166,8 @@ class InvitationApp {
     shareInvitation() {
         const userName = this.playerName || '尊贵的亲朋好友';
         const shareData = {
-            title: `${userName}邀请您参加GEA基站一周年庆祝仪式`,
-            text: `${userName}诚挚邀请您参加GEA基站一周年庆祝仪式，时间：2025年8月4日 21:00-24:00`,
+            title: `${userName}邀请您参加升学宴`,
+            text: `${userName}诚挚邀请您参加升学宴，时间：2025年8月16日 11:30`,
             url: window.location.href
         };
 
