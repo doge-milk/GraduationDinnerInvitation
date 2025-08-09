@@ -336,46 +336,8 @@ class InvitationApp {
             ctx.fillStyle = '#FFFFFF';
             ctx.font = '22px Arial, 楷体';
             ctx.fillText('2025年8月16日 （周六）', 300, 420);
-            ctx.fillText('农历六月廿三:30', 300, 450);
+            ctx.fillText('农历六月廿三', 300, 450);
             ctx.fillText('上午11:30', 300, 480);
-            
-            /* 绘制分割线
-            ctx.strokeStyle = 'rgba(227, 28, 119, 0.5)';
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(100, 480);
-            ctx.lineTo(500, 480);
-            ctx.stroke();
-
-            // 绘制时间安排标题
-            ctx.fillStyle = '#E31C77';
-            ctx.font = 'bold 24px Arial, sans-serif';
-            ctx.fillText('活动安排', 300, 520);
-            // 绘制时间表
-            const scheduleItems = [
-                { time: '20:00-21:00', event: '涂鸦' },
-                { time: '21:00-21:30', event: '庆祝仪式' },
-                { time: '21:30-22:30', event: '派对' }
-            ];
-            
-            ctx.font = '20px Arial, sans-serif';
-            let yPos = 570;
-            
-            scheduleItems.forEach(item => {
-                // 绘制时间
-                ctx.fillStyle = '#E31C77';
-                ctx.textAlign = 'left';
-                ctx.fillText(item.time, 120, yPos);
-                
-                // 绘制活动
-                ctx.fillStyle = '#FFFFFF';
-                ctx.textAlign = 'right';
-                ctx.fillText(item.event, 480, yPos);
-                
-                yPos += 40;
-            });
-            */
-
 
             // 绘制地点
             ctx.fillStyle = '#FFD700';
