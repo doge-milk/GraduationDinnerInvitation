@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>升学宴 - 邀请函</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 进入页面 -->
+    <div id="enterPage" class="page active">
+        <div class="enter-container">
+            <div class="title">升学宴邀请函</div>
+            <div class="subtitle">Graduation Dinner Invitation</div>
+            <div class="player-input">
+                <input type="text" id="playerNameInput" placeholder="请输入您的姓名" maxlength="20">
+            </div>
+            <button class="confirm-btn" id="confirmBtn" disabled>进入</button>
+        </div>
+    </div>
+
+    <!-- 转场页面 -->
+    <div id="transitionPage" class="page">
+        <div class="transition-container">
+            <div class="gif-container">
+                <img class="gif-image" src="images/transition.gif" alt="Loading...">
+            </div>
+            <div class="loading-text">正在为您准备邀请函...</div>
+        </div>
+    </div>
+
+    <!-- 邀请函页面 -->
+    <div id="invitationPage" class="page">
+        <!-- img class="background-image" src="images/container.png" alt="Background" -->
+        <div class="container">
+            <div class="invitation-card">
+                
+                <div class="title-container">
+                    <div class="title gold-text">升学宴邀请函</div>
+                    <div class="subtitle">Invitation</div>
+                </div>
+                
+                <div class="username-container">
+                    <div class="username" id="displayPlayerName">NULL</div>
+                    <div class="username-line"></div>
+                </div>
+                
+                <div class="invitation-content">
+                    <div class="text-center">诚挚邀请您参加</div>
+                    <div class="yellow-text">升学宴</div>
+                    <div class="text-center date">2025年8月16日 （周六）</div>
+                    <div class="text-center date">农历六月廿三</div>
+                    <div class="text-center time">上午11:30</div>
+                </div>
+
+                <div class="location">
+                       地点:斜桥小虎酒楼一楼大厅
+                   </div>
+             </div>
+            
+            <button class="share-button" id="shareBtn">分享邀请函</button>
+            <button class="download-button" id="downloadBtn">下载邀请函</button>
+        </div>
+        
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

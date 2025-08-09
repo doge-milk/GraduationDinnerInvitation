@@ -1,0 +1,439 @@
+/**
+ * H5版本样式文件
+ * 基于微信小程序版本转换而来，适配Web浏览器环境
+ * 主题色彩：深色背景 + 粉红色(#E31C77)强调色 + 白色文字
+ */
+
+/* ==================== 全局样式重置 ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* ==================== 页面切换系统 ==================== */
+.page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.page.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+/* ==================== 工具类样式 ==================== */
+.text-center {
+    text-align: center;
+}
+
+.gold-text {
+    color: #E31C77;
+}
+
+.yellow-text {
+    color:#ffe60aff;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+
+
+/* ==================== 进入页面样式 ==================== */
+.enter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000000;
+    padding: 20px;
+    padding-top: 20vh;
+}
+
+.logo-section {
+    margin-bottom: 30px;
+}
+
+.enter-container .logo {
+    width: 120px;
+    height: 120px;
+}
+
+.enter-container .title {
+    font-size: 84px;
+    font-weight: bold;
+    color: #E31C77;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.enter-container .subtitle {
+    font-size: 32px;
+    color: #FFFFFF;
+    opacity: 0.8;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.player-input {
+    width: 80%;
+    max-width: 300px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #E31C77;
+    border-radius: 20px;
+    padding: 0 15px;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.player-input input {
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+.player-input input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
+
+.confirm-btn {
+    width: 60%;
+    max-width: 200px;
+    height: 40px;
+    background-color: #E31C77;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(227, 28, 119, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.confirm-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(227, 28, 119, 0.5);
+}
+
+.confirm-btn:disabled {
+    background-color: rgba(227, 28, 119, 0.3);
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+/* ==================== 转场页面样式 ==================== */
+.transition-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #E31C77;
+    padding: 20px;
+}
+
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.gif-image {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background: transparent;
+    display: block;
+}
+
+.loading-text {
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* ==================== 邀请函页面样式 ==================== */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 25px 10px 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.invitation-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 300px;
+    padding: 15px;
+    background-color: rgba(17, 17, 17, 0.85);
+    border: 2px solid #E31C77;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(227, 28, 119, 0.7);
+    margin-bottom: 20px;
+    backdrop-filter: blur(1px);
+}
+
+.logo-container {
+    margin-bottom: 5px;
+}
+
+.invitation-card .logo {
+    width: 120px;
+    height: 120px;
+}
+
+.title-container {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.invitation-card .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.invitation-card .subtitle {
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+
+.username-container {
+    width: 100%;
+    margin: 15px 0;
+    position: relative;
+    text-align: center;
+}
+
+.username {
+    font-size: 30px;
+    color: #ffe60aff;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.username-line {
+    width: 60%;
+    height: 1px;
+    background-color: #ffe60aff;
+    margin: 0 auto 10px;
+}
+
+.invitation-content {
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.invitation-content .text-center {
+    font-size: 20px;
+    margin: 4px 0;
+}
+
+.event-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+.date, .time {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.schedule-container {
+    width: 100%;
+    margin: 15px 0;
+    border-top: 1px solid rgba(227, 28, 119, 0.3);
+    border-bottom: 1px solid rgba(227, 28, 119, 0.3);
+    padding: 10px 0;
+}
+
+.schedule-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 5px 10px;
+}
+
+.schedule-time {
+    color: #E31C77;
+    font-size: 14px;
+    width: 40%;
+    text-align: left;
+}
+
+.schedule-event {
+    color: #ffffff;
+    font-size: 14px;
+    width: 60%;
+    text-align: right;
+}
+
+.location {
+    color: #FFD700;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* ==================== 按钮样式 ==================== */
+.share-button, .download-button {
+    width: 80%;
+    max-width: 300px;
+    height: 45px;
+    line-height: 45px;
+    margin: 15px 0;
+    background-color: #E31C77;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 22px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(227, 28, 119, 0.7);
+    backdrop-filter: blur(3px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.share-button:hover, .download-button:hover {
+    background-color: #ff1493;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(227, 28, 119, 0.8);
+}
+
+.share-button:active, .download-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(227, 28, 119, 0.5);
+}
+
+/* ==================== 响应式设计 ==================== */
+@media (max-width: 480px) {
+    .enter-container {
+        padding: 15px;
+    }
+    
+    .invitation-card {
+        width: 95%;
+        padding: 12px;
+    }
+    
+    .container {
+        padding: 20px 8px 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .invitation-card {
+        max-width: 400px;
+        padding: 25px;
+    }
+    
+    .invitation-card .logo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .invitation-card .title {
+        font-size: 32px;
+    }
+    
+    .username {
+        font-size: 36px;
+    }
+    
+    .event-name {
+        font-size: 32px;
+    }
+}
+
+/* ==================== 动画效果 ==================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.invitation-card {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.share-button, .download-button {
+    animation: fadeIn 1s ease-out 0.3s both;
+}
